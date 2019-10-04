@@ -1,2 +1,8 @@
 # unix_setup
-Setup fresh unix installs
+
+## Installation
+
+```
+git clone https://github.com/steve-nekoliczak/unix_setup.git $HOME/.unix_setup
+$HOME/.unix_setup/setup.sh
+```
