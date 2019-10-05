@@ -1,4 +1,4 @@
 
-feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png
+feh --bg-scale ~/.unix_setup/background.png
 xbindkeys
 
