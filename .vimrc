@@ -18,6 +18,12 @@ let g:indentLine_char_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" ctrlp optimization
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 "
 " User experience
 "
