@@ -1,4 +1,3 @@
-
 "
 " Vim plugins
 "
@@ -40,19 +39,12 @@ set nu
 set cursorline
 set ruler
 set hlsearch 
-if has("gui_running")
-    set guifont=Courier\ New:h12
-endif
 syntax enable 
-highlight Comment ctermfg=green 
-colorscheme evening
-highlight Search guibg=Blue guifg=White
-highlight Search cterm=none ctermbg=Blue ctermfg=White
-highlight Visual guibg=Blue guifg=Yellow
-highlight Visual cterm=none ctermbg=Blue ctermfg=Yellow
-highlight LineNr term=underline ctermfg=14 guifg=Gray
-highlight Normal ctermbg=none
 set hidden
+
+" Theme
+colorscheme gruvbox
+set background=dark
 
 " Shortcut and macro settings
 imap ;a <Esc>
@@ -77,8 +69,6 @@ noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
-
-
 
 "
 " Language specific settings
