@@ -23,6 +23,10 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" Ack
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+
 "
 " User experience
 "
