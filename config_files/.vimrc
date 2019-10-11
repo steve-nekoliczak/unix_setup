@@ -28,6 +28,12 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 "
+" Back-end
+"
+
+set encoding=utf-8
+
+"
 " User experience
 "
 
