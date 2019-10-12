@@ -4,8 +4,7 @@
 
 ```
 git clone https://github.com/steve-nekoliczak/unix_setup.git ~/.unix_setup
-sudo apt install vim xmonad xmobar feh wicd-gtk
-cd ~/.unix_setup
+sudo apt install vim xmonad xmobar feh wicd-gtk rxvt-unicode
 ~/.unix_setup/setup.sh
 ```
 

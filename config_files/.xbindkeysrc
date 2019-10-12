@@ -41,7 +41,7 @@
     Control+Shift + i 
 
 #terminal
-"xterm"
+"rxvt"
     m:0x5 + c:58
     Control+Shift + m 
 
