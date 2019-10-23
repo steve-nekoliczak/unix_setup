@@ -27,6 +27,11 @@ endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
+" rubocop
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
+let g:vimrubocop_config = './.rubocop.yml'
+
 "
 " Back-end
 "
