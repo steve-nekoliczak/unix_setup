@@ -26,6 +26,8 @@ endif
 " Ack
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+" searches for text selected in visual mode
+vnoremap <Leader>A y:Ack! <C-r>=fnameescape(@")<CR><CR>
 
 " rubocop
 let g:vimrubocop_keymap = 0
