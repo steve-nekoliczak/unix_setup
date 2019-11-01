@@ -1,4 +1,3 @@
-
 # display git branch at prompt when in git repo dir
 git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -10,6 +9,10 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 # vim hotkeys
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
+
+
+# tmux
+alias tmux="TERM=screen-256color-bce tmux"
 
 
 #
@@ -36,5 +39,3 @@ alias br="git branch"
 alias pull="git pull"
 alias push="git push"
 alias pushnew="git push -u origin"
-
-
