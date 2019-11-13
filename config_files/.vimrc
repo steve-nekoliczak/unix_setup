@@ -40,7 +40,10 @@ nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
-nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+" nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+
+" ctags
+nnoremap <leader>c :CtrlPTag<cr>
 
 "
 " Back-end
@@ -80,6 +83,10 @@ nnoremap <leader>i :tabm +1<CR>
 nnoremap <leader>u :tabm -1<CR>
 nnoremap <leader>q :call MoveToPrevTab()<CR>
 nnoremap <leader>w :call MoveToNextTab()<CR>
+" nnoremap <C-J> <C-W>j
+" nnoremap <C-K> <C-W>k
+" nnoremap <C-L> <C-W>l
+" nnoremap <C-H> <C-W>h
 nnoremap <C-y> :tabnew<CR>
 map <C-a> :vertical resize -10<CR>
 map <C-g> :vertical resize +10<CR>
