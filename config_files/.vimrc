@@ -104,6 +104,7 @@ noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
+map <C-W>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 "
 " Language specific settings
