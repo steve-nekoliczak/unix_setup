@@ -8,5 +8,5 @@ sudo apt install vim xmonad xmobar feh wicd-gtk rxvt-unicode tmux
 ~/.unix_setup/setup.sh
 ```
 
-Use `wicd-gtk` to setup wifi
-Type in `ctrl+b ?` while in `tmux` for a list of commands.
+Use `wicd-gtk` to setup wifi.  
+Type in `ctrl+b ?` while in `tmux` for a list of commands.  
