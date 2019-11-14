@@ -45,6 +45,9 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " ctags
 nnoremap <leader>c :CtrlPTag<cr>
 
+" tagbar
+nmap <F8> :TagbarToggle<CR>
+
 "
 " Back-end
 "
