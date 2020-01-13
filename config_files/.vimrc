@@ -68,6 +68,7 @@ set expandtab
 " Visual settings
 set nu
 set cursorline
+set cursorcolumn
 set ruler
 set hlsearch 
 syntax enable 
