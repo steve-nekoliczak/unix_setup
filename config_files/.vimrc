@@ -116,6 +116,8 @@ autocmd FileType ruby set tabstop=2|set shiftwidth=2
 autocmd FileType coffee set tabstop=2|set shiftwidth=2
 " Text files
 autocmd FileType text set tabstop=2|set shiftwidth=2
+" EJS files
+au BufNewFile,BufRead *.ejs set filetype=html
 
 "
 " Functions
