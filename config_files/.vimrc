@@ -117,7 +117,7 @@ autocmd FileType coffee set tabstop=2|set shiftwidth=2
 " Text files
 autocmd FileType text set tabstop=2|set shiftwidth=2
 " EJS files
-au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.ejs set filetype=html|set tabstop=2|set shiftwidth=2
 
 "
 " Functions
