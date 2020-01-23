@@ -48,6 +48,9 @@ nnoremap <leader>c :CtrlPTag<cr>
 " tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" tabulous
+map <leader>t :call g:tabulous#renameTab()<cr>
+
 "
 " Back-end
 "
