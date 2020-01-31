@@ -61,6 +61,9 @@ set encoding=utf-8
 " User experience
 "
 
+" Sessions
+nnoremap <Leader>s :mksession<Space>
+
 " Spacing and indenting settings
 set autoindent 
 set tabstop=4 
