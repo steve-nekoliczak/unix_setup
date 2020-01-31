@@ -63,6 +63,7 @@ set encoding=utf-8
 
 " Sessions
 nnoremap <Leader>s :mksession!<Space>
+au VimLeave * if this_session != "" | exe "mksession! ".this_session
 
 " Spacing and indenting settings
 set autoindent 
