@@ -1,4 +1,10 @@
 "
+" Needs to be first
+"
+
+let mapleader = "\<Space>"
+
+"
 " Vim plugins
 "
 
