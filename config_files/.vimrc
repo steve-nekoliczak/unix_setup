@@ -97,8 +97,8 @@ map <C-i> :tabnext<CR>
 map <C-u> :tabprevious<CR>
 nnoremap <leader>i :tabm +1<CR>
 nnoremap <leader>u :tabm -1<CR>
-nnoremap <leader>q :call MoveToPrevTab()<CR>
-nnoremap <leader>w :call MoveToNextTab()<CR>
+nnoremap <leader>h :call MoveToPrevTab()<CR>
+nnoremap <leader>l :call MoveToNextTab()<CR>
 " nnoremap <C-J> <C-W>j
 " nnoremap <C-K> <C-W>k
 " nnoremap <C-L> <C-W>l
@@ -150,7 +150,7 @@ function MoveToPrevTab()
     if l:tab_nr == tabpagenr('$')
       tabprev
     endif
-    sp
+    vsp
   else
     close!
     exe "0tabnew"
@@ -172,7 +172,7 @@ function MoveToNextTab()
     if l:tab_nr == tabpagenr('$')
       tabnext
     endif
-    sp
+    vsp
   else
     close!
     tabnew
