@@ -62,7 +62,7 @@ set encoding=utf-8
 "
 
 " Sessions
-nnoremap <Leader>s :mksession<Space>
+nnoremap <Leader>s :mksession!<Space>
 
 " Spacing and indenting settings
 set autoindent 
