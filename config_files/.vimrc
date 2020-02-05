@@ -57,6 +57,14 @@ nmap <F8> :TagbarToggle<CR>
 " tabulous
 map <leader>t :call g:tabulous#renameTab()<cr>
 
+" tmuxline.vim
+let g:tmuxline_separators = {
+    \ 'left' : '|',
+    \ 'left_alt': '>',
+    \ 'right' : '',
+    \ 'right_alt' : '<',
+    \ 'space' : ' '}
+
 "
 " Back-end
 "
