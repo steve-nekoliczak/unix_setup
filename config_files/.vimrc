@@ -3,6 +3,7 @@
 "
 
 let mapleader = "\<Space>"
+nnoremap <leader>R :source ~/.vimrc<CR>
 
 "
 " Vim plugins
@@ -78,6 +79,7 @@ set encoding=utf-8
 " Sessions
 nnoremap <Leader>s :mksession!<Space>
 au VimLeave * if this_session != "" | exe "mksession! ".this_session
+set ssop-=options
 
 " Spacing and indenting settings
 set autoindent 
@@ -97,6 +99,7 @@ set hidden
 " Theme
 colorscheme gruvbox
 set background=dark
+hi TabLineSel ctermbg=LightBlue ctermfg=Black
 
 " Shortcut and macro settings
 imap ;a <Esc>

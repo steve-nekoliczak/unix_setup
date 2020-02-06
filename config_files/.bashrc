@@ -8,7 +8,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
 # vim hotkeys
 set -o vi
-bind -m vi-insert "\C-l":clear-screen
+bind -m vi-insert "\C-n":clear-screen
 
 
 # tmux
