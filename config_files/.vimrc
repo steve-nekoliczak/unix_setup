@@ -58,14 +58,6 @@ nmap <F8> :TagbarToggle<CR>
 " tabulous
 map <leader>t :call g:tabulous#renameTab()<cr>
 
-" tmuxline.vim
-let g:tmuxline_separators = {
-    \ 'left' : '|',
-    \ 'left_alt': '>',
-    \ 'right' : '',
-    \ 'right_alt' : '<',
-    \ 'space' : ' '}
-
 "
 " Back-end
 "
@@ -95,11 +87,15 @@ set ruler
 set hlsearch 
 syntax enable 
 set hidden
+au FocusGained * highlight Normal ctermbg=234 | :set cursorline
+au FocusLost * highlight Normal ctermbg=238 | :set nocursorline
 
 " Theme
 colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark = 'hard'
 hi TabLineSel ctermbg=LightBlue ctermfg=Black
+highlight Normal ctermbg=234
 
 " Shortcut and macro settings
 imap ;a <Esc>
