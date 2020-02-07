@@ -8,7 +8,6 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 # tmux
 alias tmux="TERM=screen-256color-bce tmux"
 
-
 #
 # aliases
 #
