@@ -5,12 +5,6 @@ git_branch() {
 export PS1="\u@\[\033[32m\]\w\[\033[33m\]\$(git_branch)\[\033[00m\]\$ "
 PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
-
-# vim hotkeys
-set -o vi
-bind -m vi-insert "\C-n":clear-screen
-
-
 # tmux
 alias tmux="TERM=screen-256color-bce tmux"
 
