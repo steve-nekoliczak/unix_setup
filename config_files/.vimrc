@@ -87,8 +87,8 @@ set ruler
 set hlsearch 
 syntax enable 
 set hidden
-au FocusGained * highlight Normal ctermbg=234 | :set cursorline
-au FocusLost * highlight Normal ctermbg=238 | :set nocursorline
+au FocusGained * highlight Normal ctermbg=234
+au FocusLost * highlight Normal ctermbg=238
 
 " Theme
 colorscheme gruvbox
