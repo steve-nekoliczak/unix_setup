@@ -76,8 +76,8 @@ augroup END
 set ssop-=options
 
 " Spacing and indenting settings
-set autoindent 
-set tabstop=4 
+set autoindent
+set tabstop=4
 set shiftwidth=4
 set nowrap
 set expandtab
@@ -86,8 +86,8 @@ set expandtab
 set nu
 set cursorline
 set ruler
-set hlsearch 
-syntax enable 
+set hlsearch
+syntax enable
 set hidden
 augroup focus
   au FocusGained * highlight Normal ctermbg=234
@@ -100,6 +100,7 @@ set background=dark
 let g:gruvbox_contrast_dark = 'hard'
 hi TabLineSel ctermbg=LightBlue ctermfg=Black
 highlight Normal ctermbg=234
+let g:airline_theme='simple'
 
 " Shortcut and macro settings
 imap ;a <Esc>
