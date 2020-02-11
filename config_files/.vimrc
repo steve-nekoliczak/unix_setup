@@ -70,7 +70,9 @@ set encoding=utf-8
 
 " Sessions
 nnoremap <Leader>s :mksession!<Space>
-au VimLeave * if this_session != "" | exe "mksession! ".this_session
+augroup session
+  au VimLeave * if this_session != "" | exe "mksession! ".this_session
+augroup END
 set ssop-=options
 
 " Spacing and indenting settings
@@ -87,8 +89,10 @@ set ruler
 set hlsearch 
 syntax enable 
 set hidden
-au FocusGained * highlight Normal ctermbg=234
-au FocusLost * highlight Normal ctermbg=238
+augroup focus
+  au FocusGained * highlight Normal ctermbg=234
+  au FocusLost * highlight Normal ctermbg=238
+augroup END
 
 " Theme
 colorscheme gruvbox
@@ -130,14 +134,16 @@ map <C-W>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " Language specific settings
 "
 
-" Ruby
-autocmd FileType ruby set tabstop=2|set shiftwidth=2
-" Coffeescript
-autocmd FileType coffee set tabstop=2|set shiftwidth=2
-" Text files
-autocmd FileType text set tabstop=2|set shiftwidth=2
-" EJS files
-au BufNewFile,BufRead *.ejs set filetype=html|set tabstop=2|set shiftwidth=2
+augroup languages
+  " Ruby
+  autocmd FileType ruby set tabstop=2|set shiftwidth=2
+  " Coffeescript
+  autocmd FileType coffee set tabstop=2|set shiftwidth=2
+  " Text files
+  autocmd FileType text set tabstop=2|set shiftwidth=2
+  " EJS files
+  au BufNewFile,BufRead *.ejs set filetype=html|set tabstop=2|set shiftwidth=2
+augroup END
 
 "
 " Functions
