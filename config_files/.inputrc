@@ -1,3 +1,6 @@
 set editing-mode vi
 set show-mode-in-prompt on
+set keymap vi-insert
+Control-n: clear-screen
+set keymap vi-command
 Control-n: clear-screen
