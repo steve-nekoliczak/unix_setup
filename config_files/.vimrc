@@ -90,8 +90,8 @@ set hlsearch
 syntax enable
 set hidden
 augroup focus
-  au FocusGained * highlight Normal ctermbg=234
-  au FocusLost * highlight Normal ctermbg=238
+  au FocusGained * highlight Normal ctermbg=16
+  au FocusLost * highlight Normal ctermbg=236
 augroup END
 
 " Theme
@@ -99,7 +99,7 @@ colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark = 'hard'
 hi TabLineSel ctermbg=LightBlue ctermfg=Black
-highlight Normal ctermbg=234
+highlight Normal ctermbg=16
 let g:airline_theme='simple'
 
 " Shortcut and macro settings
