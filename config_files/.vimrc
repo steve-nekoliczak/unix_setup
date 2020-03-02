@@ -77,8 +77,8 @@ set ssop-=options
 
 " Spacing and indenting settings
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set nowrap
 set expandtab
 
