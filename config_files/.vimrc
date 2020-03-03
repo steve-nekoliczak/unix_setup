@@ -58,6 +58,10 @@ nmap <F8> :TagbarToggle<CR>
 " tabulous
 map <leader>t :call g:tabulous#renameTab()<cr>
 
+" vimade
+let g:vimade = {}
+let g:vimade.fadelevel = 0.5
+
 "
 " Back-end
 "
