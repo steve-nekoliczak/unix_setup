@@ -74,9 +74,10 @@ set encoding=utf-8
 
 " Sessions
 nnoremap <Leader>s :mksession!<Space>
-augroup session
-  au VimLeave * if this_session != "" | exe "mksession! ".this_session
-augroup END
+" let this_session=""
+" augroup session
+"   au VimLeave * if this_session != "" | exe "mksession! ".this_session
+" augroup END
 set ssop-=options
 
 " Spacing and indenting settings
