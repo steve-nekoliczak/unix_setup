@@ -94,6 +94,10 @@ set ruler
 set hlsearch
 syntax enable
 set hidden
+augroup focus
+  au FocusGained * highlight Normal ctermbg=16
+  au FocusLost * highlight Normal ctermbg=236
+augroup END
 
 " Theme
 colorscheme gruvbox
