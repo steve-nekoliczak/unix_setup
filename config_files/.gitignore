@@ -3,6 +3,8 @@
 *.swp
 *.swo
 tags
+tags.lock
+tags.temp
 *.vim
 
 #
