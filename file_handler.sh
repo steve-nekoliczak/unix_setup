@@ -12,6 +12,8 @@ ln -s ~/.unix_setup/config_files/.xmobarrc ~/.xmobarrc
 mkdir -p ~/.xmonad
 ln -s ~/.unix_setup/config_files/.xmonad/xmonad-session-rc ~/.xmonad/xmonad-session-rc
 ln -s ~/.unix_setup/config_files/.xmonad/xmonad.hs ~/.xmonad/xmonad.hs
+mkdir -p ~/.tmux/
+ln -st ~/.tmux/ ~/.unix_setup/config_files/.tmux/plugins/
 
 # setup nvim by symlinking existing vim files
 mkdir -p ~/.config/nvim
