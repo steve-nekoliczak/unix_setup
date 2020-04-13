@@ -2,8 +2,13 @@
 *~
 *.swp
 *.swo
-tags
 *.vim
+
+# misc
+tags
+tags.lock
+tags.temp
+config/saml
 
 #
 # From https://github.com/github/gitignore/blob/master/Python.gitignore
