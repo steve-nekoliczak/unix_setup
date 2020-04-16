@@ -29,3 +29,5 @@ alias br="git branch"
 alias pull="git pull"
 alias push="git push"
 alias pushnew="git push -u origin"
+# python
+alias seba="source env/bin/activate"
