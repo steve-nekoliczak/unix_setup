@@ -8,11 +8,7 @@ ln -s ~/.unix_setup/config_files/.git-completion.bash ~/.git-completion.bash
 ln -s ~/.unix_setup/config_files/.inputrc ~/.inputrc
 ln -s ~/.unix_setup/config_files/.tmux.conf ~/.tmux.conf
 ln -s ~/.unix_setup/config_files/.vimrc ~/.vimrc
-ln -s ~/.unix_setup/config_files/.xbindkeys ~/.xbindkeys
-ln -s ~/.unix_setup/config_files/.xmobarrc ~/.xmobarrc
-mkdir -p ~/.xmonad
-ln -s ~/.unix_setup/config_files/.xmonad/xmonad-session-rc ~/.xmonad/xmonad-session-rc
-ln -s ~/.unix_setup/config_files/.xmonad/xmonad.hs ~/.xmonad/xmonad.hs
+
 mkdir -p ~/.tmux/
 ln -st ~/.tmux/ ~/.unix_setup/config_files/.tmux/plugins/
 
