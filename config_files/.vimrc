@@ -19,7 +19,7 @@ set updatetime=100
 filetype plugin on
 
 " indentLine
-let g:indentLine_char_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+let g:indentLine_char_list = ['.', '-']
 
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
