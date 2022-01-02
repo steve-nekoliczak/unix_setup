@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-sudo apt install vim tmux git
+sudo apt install vim tmux sakura git
 git clone https://github.com/steve-nekoliczak/unix_setup.git ~/.unix_setup
 git submodule update --init
 ~/.unix_setup/file_handler.sh
