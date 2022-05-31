@@ -145,6 +145,8 @@ augroup languages
   autocmd FileType ruby set tabstop=2|set shiftwidth=2
   " C#
   autocmd FileType cs set tabstop=4|set shiftwidth=4
+  " PHP
+  autocmd FileType php set tabstop=4|set shiftwidth=4
   " Coffeescript
   autocmd FileType coffee set tabstop=2|set shiftwidth=2
   " Text files
