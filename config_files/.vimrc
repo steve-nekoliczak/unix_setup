@@ -38,7 +38,7 @@ vnoremap <Leader>A y:Ack! <C-r>=fnameescape(@")<CR><CR>
 
 " rubocop
 let g:vimrubocop_keymap = 0
-nmap <Leader>r :RuboCop<CR>
+" nmap <Leader>r :RuboCop<CR>
 let g:vimrubocop_config = './.rubocop.yml'
 
 " vim-tmux-navigator
@@ -154,6 +154,15 @@ augroup languages
   " EJS files
   au BufNewFile,BufRead *.ejs set filetype=html|set tabstop=2|set shiftwidth=2
 augroup END
+
+"
+" vimwiki settings
+" https://vimwiki.github.io/
+"
+set nocompatible
+let g:vimwiki_global_ext = 0
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_markdown_link_ext = 1
 
 "
 " Functions
