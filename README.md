@@ -13,34 +13,38 @@ git submodule update --init
 // This will install tmux plugins
 
 git config --global credential.helper store
+git config --global core.editor "vim"
+
 # Get personal access token (PAT): https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 # use normal username and PAT as password
 # both will be saved after first successful use
-git config --global core.editor "vim"
 ```
 
 Type in `ctrl+space ?` while in `tmux` for a list of commands.
 
 ## Hotkeys
 
+Check out in `config_files/.tmux.conf` for more info
+
 ```
-Leader key is Space
+Prefix is Ctrl+Space
 Meta key for Mac is Option, elsewhere it is Alt.
 
-Ctrl+<Leader> I       - Install tmux plugins with tpm
+<Prefix> I        - Install tmux plugins with tpm
+<Prefix> R        - Reload ~/.tmux.conf
 
-Ctrl+<Leader> Ctrl+s  - Save tmux session
-Ctrl+<Leader> Ctrl+r  - Restore tmux session
+<Prefix> Ctrl+s   - Save tmux session
+<Prefix> Ctrl+r   - Restore tmux session
 
-Ctrl+<Leader> R       - Reload ~/.tmux.conf
+<Prefix> u        - Swap tab left
+<Prefix> i        - Swap tab right
+<Prefix> {        - Swap pane left
+<Prefix> }        - Swap pane right
 
-<Meta>+y              - Create new tab
-<Meta>+u              - Go to tab to the left
-<Meta>+i              - Go to tab to the right
+<Meta>+y          - Create new tab
+<Meta>+u          - Go to tab left
+<Meta>+i          - Go to tab right
 
-<Meta>+down arrow     - Split window horizontally
-<Meta>+right arrow    - Split window vertically
-
-I'll add more when I have time :)
-In the meantime you can check things out in config_files/.tmux.conf
+<Meta>+down       - Split window horizontally
+<Meta>+right      - Split window vertically
 ```
