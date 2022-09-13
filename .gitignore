@@ -1,1 +1,2 @@
 config_files/.tmux/plugins
+config_files/.tmux/resurrect

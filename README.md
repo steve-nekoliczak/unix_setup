@@ -9,6 +9,9 @@ pushd ~/.unix_setup
 git submodule update --init
 ~/.unix_setup/file_handler.sh
 
+// While in tmux, enter: Ctrl+Space I
+// This will install tmux plugins
+
 git config --global credential.helper store
 # Get personal access token (PAT): https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 # use normal username and PAT as password

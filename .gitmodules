@@ -1,3 +1,6 @@
 [submodule "config_files/.tmux/plugins/tpm"]
 	path = config_files/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "config_files/.tmux/plugins/tmux_resurrect"]
+	path = config_files/.tmux/plugins/tmux_resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
