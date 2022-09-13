@@ -24,7 +24,7 @@ Type in `ctrl+space ?` while in `tmux` for a list of commands.
 
 ## Hotkeys
 
-Check out in `config_files/.tmux.conf` for more info
+Check out `config_files/.tmux.conf` for more info
 
 ```
 Prefix is Ctrl+Space
