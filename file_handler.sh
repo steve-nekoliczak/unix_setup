@@ -10,9 +10,6 @@ ln -s ~/.unix_setup/config_files/.tmux.conf ~/.tmux.conf
 ln -s ~/.unix_setup/config_files/.tmux/ ~/
 ln -s ~/.unix_setup/config_files/.vimrc ~/.vimrc
 
-mkdir -p ~/.tmux/
-ln -st ~/.tmux/ ~/.unix_setup/config_files/.tmux/plugins/
-
 # setup nvim by symlinking existing vim files
 mkdir -p ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
