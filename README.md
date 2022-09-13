@@ -20,3 +20,27 @@ git config --global core.editor "vim"
 ```
 
 Type in `ctrl+space ?` while in `tmux` for a list of commands.
+
+## Hotkeys
+
+```
+Leader key is Space
+Meta key for Mac is Option, elsewhere it is Alt.
+
+Ctrl+<Leader> I       - Install tmux plugins with tpm
+
+Ctrl+<Leader> Ctrl+s  - Save tmux session
+Ctrl+<Leader> Ctrl+r  - Restore tmux session
+
+Ctrl+<Leader> R       - Reload ~/.tmux.conf
+
+<Meta>+y              - Create new tab
+<Meta>+u              - Go to tab to the left
+<Meta>+i              - Go to tab to the right
+
+<Meta>+down arrow     - Split window horizontally
+<Meta>+right arrow    - Split window vertically
+
+I'll add more when I have time :)
+In the meantime you can check things out in config_files/.tmux.conf
+```
