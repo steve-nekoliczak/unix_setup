@@ -108,7 +108,7 @@ hi TabLineSel ctermbg=LightBlue ctermfg=Black
 highlight Normal ctermbg=Black
 let g:airline_theme='simple'
 " conceal chars on cursor line in normal mode only
-let g:indentLine_concealcursor='n'
+let g:indentLine_concealcursor=''
 
 " Shortcut and macro settings
 imap ;a <Esc>
