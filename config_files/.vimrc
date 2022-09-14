@@ -95,8 +95,9 @@ set hlsearch
 syntax enable
 set hidden
 augroup focus
-  au FocusGained * highlight Normal ctermbg=16
-  au FocusLost * highlight Normal ctermbg=236
+  autocmd!
+  autocmd FocusGained * highlight Normal ctermbg=16
+  autocmd FocusLost * highlight Normal ctermbg=236
 augroup END
 
 " Theme
@@ -143,6 +144,7 @@ map <C-W>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 "
 
 augroup languages
+  autocmd!
   " Ruby
   autocmd FileType ruby set tabstop=2|set shiftwidth=2
   " C#
@@ -165,6 +167,10 @@ set nocompatible
 let g:vimwiki_global_ext = 0
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_markdown_link_ext = 1
+augroup WrapLineInMdFile
+    autocmd!
+    autocmd FileType markdown set wrap
+augroup END
 
 "
 " Functions
