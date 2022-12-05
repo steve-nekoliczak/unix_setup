@@ -100,6 +100,9 @@ augroup focus
   autocmd FocusLost * highlight Normal ctermbg=236
 augroup END
 
+" NERDTree settings
+let NERDTreeShowHidden=1
+
 " Theme
 colorscheme gruvbox
 set background=dark
