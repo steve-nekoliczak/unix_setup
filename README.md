@@ -3,17 +3,25 @@
 ## Installation
 
 ```
-sudo apt install vim tmux sakura git
+sudo apt install nvim tmux sakura git
+
 git clone https://github.com/steve-nekoliczak/unix_setup.git ~/.unix_setup
-pushd ~/.unix_setup
-git submodule update --init
+
+// Symlink files from config_files to their correct dirs
 ~/.unix_setup/file_handler.sh
 
+// Install Plugin Managers for tmux and neovim
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 // While in tmux, enter: Ctrl+Space I
-// This will install tmux plugins
+// This will install tmux plugins listed in .tmux.conf
+
+// While in nvim, enter: :PlugInstall
+// This will install nvim plugins listed in init.lua
 
 git config --global credential.helper store
-git config --global core.editor "vim"
+git config --global core.editor "nvim"
 
 // Get personal access token (PAT): https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 // use normal username and PAT as password
@@ -22,7 +30,7 @@ git config --global core.editor "vim"
 
 Type in `ctrl+space ?` while in `tmux` for a list of commands.
 
-## Hotkeys
+## tmux Hotkeys
 
 Check out `config_files/.tmux.conf` for more info
 
