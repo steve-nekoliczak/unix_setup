@@ -45,13 +45,12 @@ vim.cmd('set updatetime=100')
 -- matchit
 vim.cmd('filetype plugin on')
 
--- silver searcher
-vim.g.ackprg = 'ag --nogroup --nocolor --column --hidden'
-
 -- ctrlp
 vim.g.ctrlp_show_hidden = 1
 
 -- Ack
+-- use silver searcher for ack
+vim.g.ackprg = 'ag --nogroup --nocolor --column --hidden'
 -- cnoreabbrev Ack Ack!
 vim.api.nvim_set_keymap("n", "<leader>a", ":Ack!<Space>", { noremap = true })
 -- searches for text selected in visual mode
