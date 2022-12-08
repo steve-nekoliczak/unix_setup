@@ -46,7 +46,10 @@ vim.cmd('set updatetime=100')
 vim.cmd('filetype plugin on')
 
 -- silver searcher
-vim.g.ackprg = 'ag --nogroup --nocolor --column'
+vim.g.ackprg = 'ag --nogroup --nocolor --column --hidden'
+
+-- ctrlp
+vim.g.ctrlp_show_hidden = 1
 
 -- Ack
 -- cnoreabbrev Ack Ack!
