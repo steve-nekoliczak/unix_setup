@@ -71,6 +71,9 @@ vim.cmd('let NERDTreeShowHidden=1')
 
 -- ALE
 vim.api.nvim_set_keymap("n", "<leader>A", ":ALEToggle<CR>", { noremap = true })
+vim.cmd([[
+  let g:ale_linters = {'elixir': ['credo']}
+]])
 
 --
 -- Back-end
