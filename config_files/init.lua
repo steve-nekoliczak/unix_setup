@@ -42,6 +42,11 @@ vim.cmd([[
 -- git-gutter
 vim.cmd('set updatetime=100')
 
+-- git plugins' shortcuts
+vim.api.nvim_set_keymap("n", "<leader>d", ":Gdiff<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>b", ":Git blame<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>B", ":GBrowse<CR>", { noremap = true })
+
 -- matchit
 vim.cmd('filetype plugin on')
 
