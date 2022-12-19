@@ -126,7 +126,7 @@ vim.cmd([[colorscheme gruvbox]])
 vim.g.gruvbox_contrast_dark = 'hard'
 vim.cmd('hi TabLineSel ctermbg=LightBlue ctermfg=Black')
 vim.cmd('highlight Normal ctermbg=234')
-vim.g.airline_theme='simple'
+vim.g.airline_theme='gruvbox'
 -- conceal chars on cursor line in normal mode only
 vim.g.indentLine_concealcursor=''
 
