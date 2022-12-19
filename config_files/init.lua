@@ -115,7 +115,7 @@ vim.cmd([[
   set hidden
   augroup focus
     autocmd!
-    autocmd FocusGained * highlight Normal ctermbg=16
+    autocmd FocusGained * highlight Normal ctermbg=234
     autocmd FocusLost * highlight Normal ctermbg=236
   augroup END
 ]])
@@ -125,7 +125,7 @@ vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 vim.g.gruvbox_contrast_dark = 'hard'
 vim.cmd('hi TabLineSel ctermbg=LightBlue ctermfg=Black')
-vim.cmd('highlight Normal ctermbg=Black')
+vim.cmd('highlight Normal ctermbg=234')
 vim.g.airline_theme='simple'
 -- conceal chars on cursor line in normal mode only
 vim.g.indentLine_concealcursor=''
