@@ -17,8 +17,6 @@ alias lsc="ls -1 | wc -l"
 alias c="clear"
 alias h="history"
 alias grep="grep --color"
-alias bashrc="vim $HOME/.bashrc"
-alias vimrc="vim $HOME/.vimrc"
 # cd aliases
 alias home="cd $HOME"
 alias ..='cd ../'
@@ -26,13 +24,16 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias ....='cd ../../../../'
 # git
-alias co="git checkout"
-alias br="git branch"
-alias pull="git pull"
-alias push="git push"
-alias pushnew="git push -u origin"
-# python
-alias seba="source env/bin/activate"
+alias gco="git checkout"
+alias gb="git branch"
+alias gp="git pull"
+alias gps="git push"
+alias gpsn="git push -u origin"
+alias gl="git log"
+alias gs="git status"
+alias gf="git fetch"
+alias gc="git commit -v"
+alias ga="git add"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
