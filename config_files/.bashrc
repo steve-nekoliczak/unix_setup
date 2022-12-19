@@ -34,6 +34,8 @@ alias gs="git status"
 alias gf="git fetch"
 alias gc="git commit -v"
 alias ga="git add"
+alias gd="git diff"
+alias gds="git diff --staged"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
