@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-sudo apt install nvim tmux sakura git
+sudo apt install zsh nvim tmux sakura git
 
 git clone https://github.com/steve-nekoliczak/unix_setup.git ~/.unix_setup
 

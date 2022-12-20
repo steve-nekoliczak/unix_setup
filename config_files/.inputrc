@@ -1,9 +1,0 @@
-set editing-mode vi
-set show-mode-in-prompt on
-$if mode=vi
-set keymap vi-insert
-  ";a": vi-movement-mode
-  Control-n: clear-screen
-  set keymap vi-command
-  Control-n: clear-screen
-$endif
