@@ -116,7 +116,13 @@ vim.cmd([[
   augroup focus
     autocmd!
     autocmd FocusGained * highlight Normal ctermbg=234
+    autocmd FocusGained * setlocal cursorline
+    autocmd VimEnter * setlocal cursorline
+    autocmd WinEnter * setlocal cursorline
     autocmd FocusLost * highlight Normal ctermbg=236
+    autocmd FocusLost * setlocal nocursorline
+    autocmd BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
   augroup END
 ]])
 
