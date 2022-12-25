@@ -81,6 +81,7 @@ vim.api.nvim_set_keymap("n", "<leader>A", ":ALEToggle<CR>", { noremap = true })
 vim.cmd([[
   let g:ale_linters = {'elixir': ['credo']}
 ]])
+vim.cmd('let $MIX_ENV="test"') -- fixes ALE making mix ask for recompile on opened config.exs files
 
 --
 -- Back-end
