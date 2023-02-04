@@ -106,6 +106,11 @@ vim.cmd([[
   set expandtab
 ]])
 
+-- Folds
+vim.cmd([[
+  set foldmethod=syntax
+]])
+
 -- Visual settings
 vim.cmd([[
   set nu
