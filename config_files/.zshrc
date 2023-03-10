@@ -48,7 +48,8 @@ zle -N zle-keymap-select
 # hotkeys
 #
 
-bindkey '^n' clear-screen
+bindkey -M vicmd '^n' clear-screen
+bindkey -M viins '^n' clear-screen
 bindkey '^R' history-incremental-search-backward
 
 #
