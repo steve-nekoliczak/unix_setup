@@ -31,6 +31,7 @@ vim.cmd([[
   :Plug 'elixir-editors/vim-elixir'
   :Plug 'hashivim/vim-terraform'
   :Plug 'dense-analysis/ale'
+  :Plug 'neovimhaskell/haskell-vim'
 
   :call plug#end()
 ]])
