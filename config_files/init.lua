@@ -79,8 +79,9 @@ vim.cmd('let NERDTreeShowHidden=1')
 
 -- ALE
 vim.api.nvim_set_keymap("n", "<leader>A", ":ALEToggle<CR>", { noremap = true })
+-- Might have to run `stack ghc -- -fno-code` to fix stack_ghc linter
 vim.cmd([[
-  let g:ale_linters = {'elixir': ['credo']}
+  let g:ale_linters = { 'elixir': ['credo'], 'haskell': ['stack_ghc'] }
 ]])
 vim.cmd('let $MIX_ENV="test"') -- fixes ALE making mix ask for recompile on opened config.exs files
 
