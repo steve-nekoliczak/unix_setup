@@ -133,8 +133,10 @@ vim.cmd([[
 
 -- Theme
 vim.o.background = "dark"
+require("gruvbox").setup({
+  contrast = "hard"
+})
 vim.cmd([[colorscheme gruvbox]])
-vim.g.gruvbox_contrast_dark = 'hard'
 -- conceal chars on cursor line in normal mode only
 vim.g.indentLine_concealcursor=''
 
