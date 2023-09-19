@@ -18,7 +18,7 @@ vim.cmd([[
   :Plug 'tpope/vim-rails'
   :Plug 'ajh17/VimCompletesMe'
   :Plug 'kshenoy/vim-signature'
-  :Plug 'morhetz/gruvbox'
+  :Plug 'ellisonleao/gruvbox.nvim'
   :Plug 'ngmy/vim-rubocop'
   :Plug 'christoomey/vim-tmux-navigator'
   :Plug 'tpope/vim-rhubarb'
@@ -47,9 +47,6 @@ vim.cmd('set updatetime=100')
 vim.api.nvim_set_keymap("n", "<leader>d", ":Gdiff<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>b", ":Git blame<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>B", ":GBrowse<CR>", { noremap = true })
-
--- matchit
-vim.cmd('filetype plugin on')
 
 -- ctrlp
 vim.g.ctrlp_show_hidden = 1
@@ -81,7 +78,7 @@ vim.cmd('let NERDTreeShowHidden=1')
 vim.api.nvim_set_keymap("n", "<leader>A", ":ALEToggle<CR>", { noremap = true })
 -- Might have to run `stack ghc -- -fno-code` to fix stack_ghc linter
 vim.cmd([[
-  let g:ale_linters = { 'elixir': ['credo'], 'haskell': ['stack_ghc'] }
+  let g:ale_linters = { 'elixir': ['credo'], 'haskell': ['stack_ghc', 'stack_build'] }
 ]])
 vim.cmd('let $MIX_ENV="test"') -- fixes ALE making mix ask for recompile on opened config.exs files
 
@@ -119,7 +116,8 @@ vim.cmd([[
   set cursorline
   set ruler
   set hlsearch
-  syntax enable
+  syntax on
+  filetype plugin indent on
   set hidden
   augroup focus
     autocmd!
