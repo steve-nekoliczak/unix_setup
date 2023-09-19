@@ -24,7 +24,6 @@ vim.cmd([[
   :Plug 'tpope/vim-rhubarb'
   :Plug 'webdevel/tabulous'
   :Plug 'tmux-plugins/vim-tmux-focus-events'
-  :Plug 'vim-airline/vim-airline-themes'
   :Plug 'preservim/nerdcommenter'
   :Plug 'MaxMEllon/vim-jsx-pretty'
   :Plug 'vimwiki/vimwiki'
@@ -136,7 +135,6 @@ vim.cmd([[
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 vim.g.gruvbox_contrast_dark = 'hard'
-vim.g.airline_theme='gruvbox'
 -- conceal chars on cursor line in normal mode only
 vim.g.indentLine_concealcursor=''
 
