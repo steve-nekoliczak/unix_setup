@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-pacman -S base base-devel chromium dhcpcd efibootmgr grub iwd linux linux-firmware man-db neovim plasma-meta sakura the_silver_searcher tmux xorg-xinit yay zsh
+pacman -S base base-devel chromium dhcpcd efibootmgr grub iwd linux linux-firmware man-db neovim plasma-meta sakura the_silver_searcher tmux xclip xorg-xinit yay zsh
 
 git clone https://github.com/steve-nekoliczak/unix_setup.git ~/.unix_setup
 
