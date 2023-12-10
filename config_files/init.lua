@@ -30,7 +30,6 @@ vim.cmd([[
   :Plug 'hashivim/vim-terraform'
   :Plug 'neovimhaskell/haskell-vim'
   :Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  :Plug 'OmniSharp/omnisharp-vim'
 
   :call plug#end()
 ]])
@@ -73,23 +72,10 @@ vim.api.nvim_set_keymap("n", "<C-l>", ":TmuxNavigateRight<CR>", { noremap = true
 -- NERDTree
 vim.cmd('let NERDTreeShowHidden=1')
 
--- ALE
--- vim.api.nvim_set_keymap("n", "<leader>A", ":ALEToggle<CR>", { noremap = true })
--- TODO: Find better way to load UnityEngine.dll instead of hardcoding to current version's DLL.
--- vim.cmd([[
---   let g:OmniSharp_server_use_mono = 1
---   let g:ale_linters = { 'cs': ['OmniSharp'] }
---   let g:ale_cs_csc_assemblies = ['/home/steve/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed/UnityEngine.dll']
---   let g:ale_completion_enabled = 1
---   let g:OmniSharp_server_stdio = 1
--- ]])
+-- CoC
 vim.cmd([[
-  let g:OmniSharp_server_use_mono = 1
-  let g:OmniSharp_server_stdio = 1
-
   nmap <silent> gd <Plug>(coc-definition)
 ]])
-vim.cmd('let $MIX_ENV="test"') -- fixes ALE making mix ask for recompile on opened config.exs files
 
 --
 -- Back-end
