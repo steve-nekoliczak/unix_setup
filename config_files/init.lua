@@ -31,6 +31,7 @@ vim.cmd([[
   :Plug 'hashivim/vim-terraform'
   :Plug 'dense-analysis/ale'
   :Plug 'neovimhaskell/haskell-vim'
+  :Plug 'OmniSharp/omnisharp-vim'
 
   :call plug#end()
 ]])
@@ -75,8 +76,10 @@ vim.cmd('let NERDTreeShowHidden=1')
 
 -- ALE
 vim.api.nvim_set_keymap("n", "<leader>A", ":ALEToggle<CR>", { noremap = true })
+-- TODO: Find better way to load UnityEngine.dll instead of hardcoding to current version's DLL.
 vim.cmd([[
-  let g:ale_linters = { 'elixir': ['credo'] }
+  let g:ale_linters = { 'elixir': ['credo'], 'cs': ['mcs'] }
+  let g:ale_cs_csc_assemblies = ['/home/steve/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed/UnityEngine.dll']
 ]])
 vim.cmd('let $MIX_ENV="test"') -- fixes ALE making mix ask for recompile on opened config.exs files
 
@@ -114,8 +117,8 @@ vim.cmd([[
   set cursorline
   set ruler
   set hlsearch
-  syntax on
   filetype plugin indent on
+  syntax enable
   set hidden
   augroup focus
     autocmd!
