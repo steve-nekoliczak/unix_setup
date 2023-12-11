@@ -18,15 +18,12 @@ vim.cmd([[
   :Plug 'tpope/vim-rails'
   :Plug 'kshenoy/vim-signature'
   :Plug 'ellisonleao/gruvbox.nvim'
-  :Plug 'ngmy/vim-rubocop'
   :Plug 'christoomey/vim-tmux-navigator'
   :Plug 'tpope/vim-rhubarb'
   :Plug 'webdevel/tabulous'
   :Plug 'tmux-plugins/vim-tmux-focus-events'
   :Plug 'preservim/nerdcommenter'
   :Plug 'MaxMEllon/vim-jsx-pretty'
-  :Plug 'vimwiki/vimwiki'
-  :Plug 'elixir-editors/vim-elixir'
   :Plug 'hashivim/vim-terraform'
   :Plug 'neovimhaskell/haskell-vim'
   :Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -57,11 +54,6 @@ vim.api.nvim_set_keymap("n", "<leader>a", ":Ack!<Space>", { noremap = true })
 -- searches for text selected in visual mode
 vim.api.nvim_set_keymap("v", "<leader>a", 'y:Ack! <C-r>=fnameescape(@")<CR><CR>', { noremap = true })
 
--- rubocop
--- vim.g.vimrubocop_keymap = 0
--- nmap <Leader>r :RuboCop<CR>
--- let g:vimrubocop_config = './.rubocop.yml'
-
 -- vim-tmux-navigator
 -- let g:tmux_navigator_no_mappings = 1
 vim.api.nvim_set_keymap("n", "<C-h>", ":TmuxNavigateLeft<CR>", { noremap = true })
@@ -78,7 +70,7 @@ local keyset = vim.keymap.set
 vim.cmd('set splitbelow')
 vim.cmd('set splitright')
 
-keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
+vim.cmd('nnoremap <silent><nowait> gd  :call CocAction(\'jumpDefinition\', v:false)<CR>')
 keyset("n", "gs", ":sp<CR><Plug>(coc-definition)", {silent = true})
 keyset("n", "gv", ":vsp<CR><Plug>(coc-definition)", {silent = true})
 keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
@@ -102,7 +94,6 @@ keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_spa
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
-vim.cmd('nnoremap <silent><nowait> <leader>d  :call CocAction(\'jumpDefinition\', v:false)<CR>')
 
 --
 -- Back-end
@@ -212,21 +203,13 @@ vim.cmd([[
   augroup END
 ]])
 
---
--- vimwiki settings
--- https://vimwiki.github.io/
---
-
 vim.cmd([[
   set nocompatible
   augroup WrapLineInMdFile
       autocmd!
       autocmd FileType markdown set wrap
   augroup END
-  let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 ]])
-vim.g.vimwiki_global_ext = 0
-vim.g.vimwiki_markdown_link_ext = 1
 
 -- TODO move this over to lua at some point
 vim.api.nvim_exec([[
