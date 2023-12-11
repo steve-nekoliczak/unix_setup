@@ -75,7 +75,12 @@ vim.cmd('let NERDTreeShowHidden=1')
 -- CoC
 local keyset = vim.keymap.set
 
+vim.cmd('set splitbelow')
+vim.cmd('set splitright')
+
 keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
+keyset("n", "gs", ":sp<CR><Plug>(coc-definition)", {silent = true})
+keyset("n", "gv", ":vsp<CR><Plug>(coc-definition)", {silent = true})
 keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
 keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
