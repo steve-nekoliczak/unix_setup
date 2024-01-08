@@ -180,6 +180,7 @@ vim.api.nvim_set_keymap("n", "<leader>8", "8gt", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>9", "9gt", { noremap = true })
 
 vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true })
 
 --
 -- Language specific settings
