@@ -81,10 +81,13 @@ alias gc="git commit -v"
 alias ga="git add"
 alias gd="git diff"
 alias gds="git diff --staged"
+# language tooling
+# ruby
+alias be="bundle exec"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # direnv setup for Haskell IHP
 # https://direnv.net/docs/hook.html
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
