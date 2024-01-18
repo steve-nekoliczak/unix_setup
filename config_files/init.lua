@@ -27,6 +27,7 @@ vim.cmd([[
   :Plug 'hashivim/vim-terraform'
   :Plug 'neovimhaskell/haskell-vim'
   :Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  :Plug 'dhruvasagar/vim-table-mode'
 
   :call plug#end()
 ]])
