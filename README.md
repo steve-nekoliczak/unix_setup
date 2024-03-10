@@ -2,9 +2,11 @@
 
 ## Installation
 
-During Arch linux installation:
+[Install Ubuntu Desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
+
+After Ubuntu installation:
 ```
-pacman -S base base-devel chromium dhcpcd efibootmgr grub iwd linux linux-firmware man-db neovim plasma-meta sakura the_silver_searcher tmux xclip xorg-xinit yay zsh
+sudo apt install git kitty neovim silversearcher-ag tmux xclip zsh
 ```
 
 After installation:
@@ -44,13 +46,18 @@ Install neovim plugins listed in `config_files/init.lua` by running this command
 
 Install Node and NPM since the CoC plugin needs them:
 ```
-sudo pacman -S nodejs npm
+sudo apt install nodejs npm
 ```
 
 Install language servers CoC requires:
 ```
-sudo pacman -S mono mono-msbuild     // Language server for C#
+sudo pacman -S mono mono-msbuild    // Language server for C#
 gem install solargraph              // Language server for Ruby
+```
+
+Install GHCup to install `haskell-language-server`:
+```
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
 
 Install CoC plugins for those language servers.
@@ -59,6 +66,7 @@ While in neovim:
 ```
 :CocInstall coc-omnisharp           // Installs C# language server
 :CocInstall coc-solargraph          // Installs Ruby language server
+:CocInstall coc-hls                 // Installs Haskell Language Server
 ```
 
 ## tmux Hotkeys
