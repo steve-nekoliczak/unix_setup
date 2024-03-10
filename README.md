@@ -6,7 +6,8 @@
 
 After Ubuntu installation, install the packages we need:
 ```
-sudo apt install git kitty neovim silversearcher-ag tmux xclip zsh
+sudo apt install git kitty silversearcher-ag tmux xclip zsh
+snap install nvim --classic
 ```
 
 Setup our shell environment:
