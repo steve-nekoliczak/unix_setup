@@ -4,26 +4,26 @@
 
 [Install Ubuntu Desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
 
-After Ubuntu installation:
+After Ubuntu installation, install the packages we need:
 ```
 sudo apt install git kitty neovim silversearcher-ag tmux xclip zsh
 ```
 
-After installation:
+Setup our shell environment:
 ```
 git clone https://github.com/steve-nekoliczak/unix_setup.git ~/.unix_setup
 // Symlink files from config_files to their correct dirs
 ~/.unix_setup/file_handler.sh
 ```
 
-Install Plugin Managers for tmux:
+Install Plugin Managers for `tmux`:
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 While in `tmux`, enter: `Ctrl+Space I` to install plugins listed in `config_files/.tmux.conf`.
 
-Configure git:
+Configure `git`:
 ```
 git config --global credential.helper store
 git config --global core.editor "nvim"
@@ -34,12 +34,12 @@ Both will be saved after first successful use.
 
 ## NeoVim Setup
 
-Install `vim-plug` plugin manager
+Install the `vim-plug` plugin manager
 ```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-Install neovim plugins listed in `config_files/init.lua` by running this command while in neovim:
+Install the NeoVim plugins listed in `config_files/init.lua` by running this command while in `nvim`:
 ```
 :PlugInstall
 ```
@@ -49,9 +49,8 @@ Install Node and NPM since the CoC plugin needs them:
 sudo apt install nodejs npm
 ```
 
-Install language servers CoC requires:
+Install the language servers CoC requires:
 ```
-sudo pacman -S mono mono-msbuild    // Language server for C#
 gem install solargraph              // Language server for Ruby
 ```
 
@@ -61,15 +60,15 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
 
 Install CoC plugins for those language servers.
-See list of language servers here: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
-While in neovim:
+[See the list of language servers here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
+
+While in `nvim`:
 ```
-:CocInstall coc-omnisharp           // Installs C# language server
 :CocInstall coc-solargraph          // Installs Ruby language server
 :CocInstall coc-hls                 // Installs Haskell Language Server
 ```
 
-## tmux Hotkeys
+## `tmux` Hotkeys
 
 Type in `ctrl+space ?` while in `tmux` for a list of commands.
 
