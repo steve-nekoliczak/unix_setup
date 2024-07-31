@@ -69,6 +69,18 @@ While in `nvim`:
 :CocInstall coc-hls                 // Installs Haskell Language Server
 ```
 
+`:CocInstall coc-elixir` is bugged, so we need to install `elixir-ls` from source:
+
+https://github.com/elixir-lsp/coc-elixir/issues/46#issuecomment-849725662
+
+```
+git clone https://github.com/elixir-lsp/elixir-ls.git ~/.elixir-ls
+cd ~/.elixir-ls
+mix deps.get && mix compile && mix elixir_ls.release2 -o release
+```
+
+`coc-settings.json` already has this path specified, so no more stuff to configure.
+
 ## `tmux` Hotkeys
 
 Type in `ctrl+space ?` while in `tmux` for a list of commands.
