@@ -67,6 +67,7 @@ While in `nvim`:
 ```
 :CocInstall coc-solargraph          // Installs Ruby language server
 :CocInstall coc-hls                 // Installs Haskell Language Server
+:CocInstall coc-godot               // Installs Godotscript language server
 ```
 
 `:CocInstall coc-elixir` has a bug where it can't install `elixir-ls`, so we need to install `elixir-ls` from source:

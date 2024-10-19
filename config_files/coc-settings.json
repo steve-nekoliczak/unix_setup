@@ -2,6 +2,11 @@
   "solargraph.diagnostics": true,
   "solargraph.hover": true,
   "languageserver": {
+    "godot": {
+      "host": "127.0.0.1",
+      "filetypes": ["gd", "gdscript", "gdscript3"],
+      "port": 6005
+    },
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
