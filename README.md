@@ -50,9 +50,12 @@ Install Node and NPM since the CoC plugin needs them:
 sudo apt install nodejs npm
 ```
 
+Follow [the instructions here](https://www.mono-project.com/download/stable/) to install mono for C#.
+
 Install the language servers CoC requires:
 ```
-gem install solargraph              // Language server for Ruby
+sudo apt install mono-devel // Language server for C#
+gem install solargraph      // Language server for Ruby
 ```
 
 Install GHCup to install `haskell-language-server`:
@@ -65,6 +68,7 @@ Install CoC plugins for those language servers.
 
 While in `nvim`:
 ```
+:CocInstall coc-omnisharp           // Installs C# language server
 :CocInstall coc-solargraph          // Installs Ruby language server
 :CocInstall coc-hls                 // Installs Haskell Language Server
 :CocInstall coc-godot               // Installs Godotscript language server
