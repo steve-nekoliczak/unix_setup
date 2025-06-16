@@ -10,3 +10,4 @@ ln -s ~/.unix_setup/config_files/init.lua ~/.config/nvim/init.lua
 ln -s ~/.unix_setup/config_files/coc-settings.json ~/.config/nvim/coc-settings.json
 mkdir -p ~/.config/kitty/
 ln -s ~/.unix_setup/config_files/kitty.conf ~/.config/kitty/kitty.conf
+ln -s ~/.unix_setup/config_files/.ideavimrc ~/.ideavimrc

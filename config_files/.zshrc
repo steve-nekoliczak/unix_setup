@@ -85,7 +85,8 @@ alias gds="git diff --staged"
 # ruby
 alias be="bundle exec"
 
-export PATH="$PATH:$HOME/.asdf/shims"
+export EDITOR="nvim"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"

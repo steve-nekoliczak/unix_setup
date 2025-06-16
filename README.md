@@ -28,6 +28,7 @@ Configure `git`:
 ```
 git config --global credential.helper store
 git config --global core.editor "nvim"
+git config --global core.excludesFile '~/.gitignore'
 ```
 Get personal access token (PAT): https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 Use normal username and PAT as password.
