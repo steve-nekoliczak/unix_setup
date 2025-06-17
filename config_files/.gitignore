@@ -137,3 +137,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# `.tool-versions` file that asdf uses
+.tool-versions
+
+# Ideavim
+.idea/
