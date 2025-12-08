@@ -1,74 +1,25 @@
-#
-# history settings
-#
-
+# History settings
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-#
-# prompt settings
-#
-
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-setopt PROMPT_SUBST
-PROMPT='%1d%{%F{green}%}$(parse_git_branch)%{%F{none}%}$ '
-
-#
-# vim settings
-#
-
-bindkey -v
-
-# reduce switching delay
+# Reduce switching delay
 KEYTIMEOUT=15
 
-bindkey -s ';a' '\e'
-
-# change cursor depending on current vim mode
-function zle-line-init zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-#
-# hotkeys
-#
-
-bindkey -M vicmd '^n' clear-screen
-bindkey -M viins '^n' clear-screen
-bindkey '^R' history-incremental-search-backward
-
-#
-# aliases
-#
-
-# standard shell commands
+# Standard shell command aliases
 alias ll="ls -la"
 alias lsc="ls -1 | wc -l"
 alias c="clear"
 alias h="history"
 alias grep="grep --color"
+alias sz="source ~/.zshrc"
 # cd aliases
 alias home="cd $HOME"
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias ....='cd ../../../../'
-# git
+# git aliases
 alias gco="git checkout"
 alias gb="git branch"
 alias gp="git pull"
@@ -81,12 +32,50 @@ alias gc="git commit -v"
 alias ga="git add"
 alias gd="git diff"
 alias gds="git diff --staged"
-# language tooling
-# ruby
+
+# Ruby language config
 alias be="bundle exec"
 
+# Set default editor to neovim
 export EDITOR="nvim"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Add asdf to $PATH
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# Use vim hotkeys
+bindkey -v
+
+# Map ;a to Escape for vim hotkeys
+# That way we can change from insert to normal mode with ;a
+bindkey -s ';a' '\e'
+
+# Change cursor depending on current vim mode
+# Normal mode is a block cursor
+# Insert mode is a line cursor
+function zle-line-init zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# vcs_info: Show the current dir's git branch in the shell prompt
+# compinit: Add the current dir's git branches to zsh's autocomplete
+autoload -Uz vcs_info compinit
+precmd() { vcs_info compinit }
+
+# Set up the prompt with git branch name
+setopt PROMPT_SUBST
+zstyle ':vcs_info:git:*' formats '%b'
+# Alternate prompt with more info
+# PROMPT='%F{magenta}[%n@%m] %F{none}% %1d%{%F{green}%}(${vcs_info_msg_0_})%{%F{none}%}$ '
+PROMPT='%1d%{%F{green}%}(${vcs_info_msg_0_})%{%F{none}%}$ '
+
+echo "Sourced ~/.zshrc"

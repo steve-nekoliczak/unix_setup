@@ -12,23 +12,15 @@ vim.cmd([[
   :Plug 'kien/ctrlp.vim'
   :Plug 'preservim/nerdtree'
   :Plug 'vim-airline/vim-airline'
-  :Plug 'tpope/vim-endwise'
   :Plug 'tpope/vim-fugitive'
   :Plug 'airblade/vim-gitgutter'
-  :Plug 'tpope/vim-rails'
   :Plug 'kshenoy/vim-signature'
   :Plug 'ellisonleao/gruvbox.nvim'
   :Plug 'christoomey/vim-tmux-navigator'
   :Plug 'tpope/vim-rhubarb'
   :Plug 'webdevel/tabulous'
   :Plug 'tmux-plugins/vim-tmux-focus-events'
-  :Plug 'preservim/nerdcommenter'
-  :Plug 'MaxMEllon/vim-jsx-pretty'
-  :Plug 'hashivim/vim-terraform'
-  :Plug 'neovimhaskell/haskell-vim'
-  :Plug 'neoclide/coc.nvim', {'branch': 'release'}
   :Plug 'dhruvasagar/vim-table-mode'
-  :Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   :call plug#end()
 ]])
@@ -65,37 +57,6 @@ vim.api.nvim_set_keymap("n", "<C-l>", ":TmuxNavigateRight<CR>", { noremap = true
 
 -- NERDTree
 vim.cmd('let NERDTreeShowHidden=1')
-
--- CoC
-local keyset = vim.keymap.set
-
-vim.cmd('set splitbelow')
-vim.cmd('set splitright')
-
-vim.cmd('nnoremap <silent><nowait> gd  :call CocAction(\'jumpDefinition\', v:false)<CR>')
-keyset("n", "gs", ":sp<CR><Plug>(coc-definition)", {silent = true})
-keyset("n", "gv", ":vsp<CR><Plug>(coc-definition)", {silent = true})
-keyset("n", "gy", ":vsp<CR><Plug>(coc-definition)<C-W>T", {silent = true})
-keyset("n", "gt", "<Plug>(coc-type-definition)", {silent = true})
-keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
-keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
-
-function _G.show_docs()
-    local cw = vim.fn.expand('<cword>')
-    if vim.fn.index({'vim', 'help'}, vim.bo.filetype) >= 0 then
-        vim.api.nvim_command('h ' .. cw)
-    elseif vim.api.nvim_eval('coc#rpc#ready()') then
-        vim.fn.CocActionAsync('doHover')
-    else
-        vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
-    end
-end
-keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
-
-local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
-keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : "<TAB>"' , opts)
-keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
--- keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 --
 -- Back-end
@@ -264,45 +225,3 @@ endfunc
 nnoremap <leader>h :call MoveToPrevTab()<CR>
 nnoremap <leader>l :call MoveToNextTab()<CR>
 ]], false)
-
-require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
-
-  -- Automatically install missing parsers when entering buffer
-  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-  auto_install = true,
-
-  -- List of parsers to ignore installing (or "all")
-  ignore_install = { "javascript" },
-
-  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
-  highlight = {
-    enable = true,
-
-    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-    -- the name of the parser)
-    -- list of language that will be disabled
-    disable = { "c", "rust" },
-    -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
-    disable = function(lang, buf)
-        local max_filesize = 100 * 1024 -- 100 KB
-        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-        if ok and stats and stats.size > max_filesize then
-            return true
-        end
-    end,
-
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
