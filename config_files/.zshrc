@@ -13,6 +13,7 @@ alias c="clear"
 alias h="history"
 alias grep="grep --color"
 alias sz="source ~/.zshrc"
+alias fnd="find . -type f -name"
 # cd aliases
 alias home="cd $HOME"
 alias ..='cd ../'
