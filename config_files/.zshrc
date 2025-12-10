@@ -50,6 +50,9 @@ bindkey -v
 # That way we can change from insert to normal mode with ;a
 bindkey -s ';a' '\e'
 
+# Enable's reverse search
+bindkey '^R' history-incremental-search-backward
+
 # Change cursor depending on current vim mode
 # Normal mode is a block cursor
 # Insert mode is a line cursor
