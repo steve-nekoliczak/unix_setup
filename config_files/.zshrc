@@ -82,4 +82,8 @@ zstyle ':vcs_info:git:*' formats '%b'
 # PROMPT='%F{magenta}[%n@%m] %F{none}% %1d%{%F{green}%}(${vcs_info_msg_0_})%{%F{none}%}$ '
 PROMPT='%1d%{%F{green}%}(${vcs_info_msg_0_})%{%F{none}%}$ '
 
+# Uncomment this line if you want git's autocomplete to work for unstaged files. See:
+# https://www.reddit.com/r/zsh/comments/hxq3mg/zsh_does_not_autocomplete_directories_for_git/
+# setopt COMPLETE_ALIASES
+
 echo "Sourced ~/.zshrc"
